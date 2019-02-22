@@ -6,7 +6,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 // Require all models
-// var db = require("../models");
+var db = require("../models");
 
 // GET route for index and scraping MixMag website
 router.get("/", (req, res) => {
@@ -19,13 +19,22 @@ router.get("/", (req, res) => {
             result.title = $(element).find("h3").text();
             result.summary = $(element).find("p").text();
             result.link = `https://mixmag.net${$(element).find("a").attr("href")}`;
-            console.log(result);
+            // console.log(result);
+
+            //mongoose - create new Article using our scrape above
+            db.Article.create(result)
+            .then(function(dbArticle) {
+                //view added result in console
+                console.log(dbArticle);
+            })
+            .catch(function(err) {
+                //log an error if occured
+                console.log(err);
+            })
         });
         
-        res.render("index")
-    })
-
-
+        res.send("scrape complete")
+    });
 
 
 
