@@ -1,10 +1,14 @@
+<div class="container">
 <h1>LATEST NEWS</h1>
 
+<a href="/scrape">CLICK HERE TO SCRAPE NEW ARTICLES</a>
 {{#each result}}
 
 <div class="article">
 <h6>{{this.title}}</h6>
 <p>{{this.summary}}</p>
-<a href=>{{this.link}}</a>
+<a href="{{this.link}}">{{this.link}}</a>
 </div>
 {{/each}}
+
+</div>
