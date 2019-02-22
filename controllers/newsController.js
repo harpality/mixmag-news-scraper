@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
             console.log(result);
         });
         
-        res.send("scrape complete")
+        res.render("index")
     })
 
 
