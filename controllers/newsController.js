@@ -9,12 +9,12 @@ const cheerio = require("cheerio");
 var db = require("../models");
 
 // GET route for index and scraping MixMag website
-router.get("/", (req, res) => {
+router.get("/scrape", (req, res) => {
     // grab the html body via axios
-    axios.get("https://mixmag.net/news").then((response) => {
+    axios.get("https://mixmag.net/news").then(function(response) {
         // load the response into cheerio and save it to $
         const $ = cheerio.load(response.data);
-        $("article").each((i, element) => {
+        $("article").each(function(i, element) {
             let result = {};
             result.title = $(element).find("h3").text();
             result.summary = $(element).find("p").text();
@@ -31,14 +31,20 @@ router.get("/", (req, res) => {
                 //log an error if occured
                 console.log(err);
             })
+
         });
-        
-        res.send("scrape complete")
+        res.redirect("/");
     });
+  });
 
-
-
-    // res.render("index")
+  router.get("/", function(req, res) {
+      db.Article.find({})
+        .then(function(dbArticle) {
+            res.json(dbArticle);
+        })
+        .catch(function(err) {
+            res.json(err);
+        })
   });
   
 
