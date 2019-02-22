@@ -40,7 +40,7 @@ router.get("/scrape", (req, res) => {
   router.get("/", function(req, res) {
       db.Article.find({})
         .then(function(dbArticle) {
-            res.json(dbArticle);
+            res.render("index", {result:dbArticle});
         })
         .catch(function(err) {
             res.json(err);
