@@ -1,14 +1,28 @@
 body {
-    background-color: #f4f4f4;
+    background-color:#ede5d3;
     text-align: center;
 }
 
+
 .article {
-    background-color: yellow;
+    background-color:#f4e242;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    border: 2px black inset;
+    border-radius: 20px;
 }
 
 .comment_button {
     position: relative;
     bottom: 1rem;
     right: 1rem;
+}
+
+.modal {
+    background-color: #f4e242;
+}
+
+.modal-footer {
+    background-color: #f4e242 !important;
 }
