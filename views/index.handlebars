@@ -8,15 +8,16 @@
         <h6>{{this.title}}</h6>
         <p>{{this.summary}}</p>
         <a href="{{this.link}}">{{this.link}}</a><br>
-        <div class="comment_button right-align" data-id="{{this.id}}">
-            <a class="waves-effect waves-light btn modal-trigger" id="#try" href="#modal{{this.id}}">Comments</a>
+        <div class="comment_button right-align">
+            <a class="waves-effect waves-light btn modal-trigger" data-id="{{this.id}}" id="open-comment" href="#modal{{this.id}}">Comments</a>
         </div>
         <!-- Modal Structure -->
         <div id="modal{{this.id}}" class="modal">
             <div class="modal-content">
                 <h6>Comments</h6>
-                <div class="comments">
-                <p>I don't like this article about {{this.title}}</p>
+                <div id="comments">
+                {{!-- {{this.comment.body}} --}}
+                {{!-- <p>I don't like this article about {{this.title}}</p> --}}
                 </div>
                 <form>
                 <h6>Add Your Comment</h6>
