@@ -9,7 +9,7 @@
         <p>{{this.summary}}</p>
         <a href="{{this.link}}">{{this.link}}</a><br>
         <div class="comment_button right-align" data-id="{{this.id}}">
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal{{this.id}}">Comments</a>
+            <a class="waves-effect waves-light btn modal-trigger" id="#try" href="#modal{{this.id}}">Comments</a>
         </div>
         <!-- Modal Structure -->
         <div id="modal{{this.id}}" class="modal">
@@ -18,11 +18,14 @@
                 <div class="comments">
                 <p>I don't like this article about {{this.title}}</p>
                 </div>
+                <form>
                 <h6>Add Your Comment</h6>
-                <input type="text"/>
+                <input type="text" id="userComment"/>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Save Comment</a>
+                
+                <a href="#!" class="save-comment modal-close waves-effect waves-green btn-flat" data-id="{{this.id}}">Save Comment</a>
+                </form>
             </div>
         </div>
 
