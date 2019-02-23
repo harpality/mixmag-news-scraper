@@ -6,3 +6,9 @@ body {
 .article {
     background-color: yellow;
 }
+
+.comment_button {
+    position: relative;
+    bottom: 1rem;
+    right: 1rem;
+}

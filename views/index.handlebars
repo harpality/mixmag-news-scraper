@@ -1,14 +1,28 @@
 <div class="container">
-<h1>LATEST NEWS</h1>
+    <h1>LATEST NEWS</h1>
 
-<a href="/scrape">CLICK HERE TO SCRAPE NEW ARTICLES</a>
-{{#each result}}
+    <a href="/scrape">CLICK HERE TO SCRAPE NEW ARTICLES</a>
+    {{#each result}}
 
-<div class="article">
-<h6>{{this.title}}</h6>
-<p>{{this.summary}}</p>
-<a href="{{this.link}}">{{this.link}}</a>
-</div>
-{{/each}}
+    <div class="article">
+        <h6>{{this.title}}</h6>
+        <p>{{this.summary}}</p>
+        <a href="{{this.link}}">{{this.link}}</a><br>
+        <div class="comment_button right-align">
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Comments</a>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h6>Comments</h6>
+                <p>I don't like this article!</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+
+    </div>
+    {{/each}}
 
 </div>
