@@ -1,10 +1,14 @@
 $(document).ready(function(){
     $('.modal').modal();
     $('.save-comment').click(function(){
-        let comment = $("#userComment").val()
         let thisId = $(this).attr('data-id'); 
+        let comment = $(`#modal${thisId} #userComment`).val()
         console.log(comment, thisId)
-        $("#userComment").val("");
+        $(`#modal${thisId} #userComment`).val("");
     })
 
 });
+
+// $('#try').click(function() {
+//     $("#userComment").val("");
+// })
