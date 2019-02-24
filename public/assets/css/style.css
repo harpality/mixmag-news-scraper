@@ -1,27 +1,35 @@
 body {
-    background-color:#ede5d3;
+  background-color: #ede5d3;
+  font-family: "Karla", sans-serif;
 }
-
 
 .article {
-    background-color:#f4e242;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    padding-top: 5px;
-    border: 2px black inset;
-    border-radius: 20px;
+  background-color: #f4e242;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-top: 5px;
+  border: 2px black inset;
+  border-radius: 20px;
+  text-align: center;
 }
 
-.comment_button {
-    position: relative;
-    bottom: 1rem;
-    right: 1rem;
+.card {
+  height: 30vh;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .modal {
-    background-color: #f4e242;
+  background-color: #ede5d3;
+  text-align: left;
+  max-width: 30%;
+  border: 5px solid black;
 }
 
 .modal-footer {
-    background-color: #f4e242 !important;
+  background-color: #ede5d3 !important;
 }
