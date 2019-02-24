@@ -5,7 +5,7 @@ const router = express.Router();
 const axios = require("axios");
 const cheerio = require("cheerio");
 
-// Require all models
+// Require all models 
 var db = require("../models");
 
 // GET route for index and scraping MixMag website
@@ -64,6 +64,7 @@ router.get("/articles/:id", function(req, res) {
       // ..and populate all of the notes associated with it
       .populate("comment")
       .then(function(dbArticle) {
+        console.log(dbArticle)
         // If we were able to successfully find an Article with the given id, send it back to the client
         res.json(dbArticle);
       })
