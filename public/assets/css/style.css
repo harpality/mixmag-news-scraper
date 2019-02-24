@@ -8,6 +8,9 @@ body {
   position: relative;
 }
 
+.card:hover {
+    background-color: #3949ab !important;
+}
 .card-content {
     height: 180px;
 }
