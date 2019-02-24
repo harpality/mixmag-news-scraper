@@ -12,11 +12,11 @@
             <a class="waves-effect waves-light btn modal-trigger" data-id="{{this.id}}" id="open-comment" href="#modal{{this.id}}">Comments</a>
         </div>
         <!-- Modal Structure -->
-        <div id="modal{{this.id}}" class="modal">
+        <div id="modal{{this.id}}" class="modal" data-id="{{this.id}}">
             <div class="modal-content">
                 <h6>Comments</h6>
                 <div id="comments">
-                {{!-- {{this.comment.body}} --}}
+                {{this.comment}}
                 {{!-- <p>I don't like this article about {{this.title}}</p> --}}
                 </div>
                 <form>

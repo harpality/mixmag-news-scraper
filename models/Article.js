@@ -24,6 +24,10 @@ let ArticleSchema = new Schema({
     comment: {
         type: Schema.Types.ObjectId,
         ref: "Comment"
+    },
+    time: {
+        type: Date,
+        default: Date.now
     }
 });
 

@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     });
 
-    $('#open-comment').click(function() {
+    $('#open-comment').on("click", function() {
         let thisId = $(this).attr("data-id");
         console.log(thisId);
         $.ajax({
