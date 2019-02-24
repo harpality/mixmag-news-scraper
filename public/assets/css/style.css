@@ -3,19 +3,18 @@ body {
   font-family: "Karla", sans-serif;
 }
 
-.article {
-  background-color: #f4e242;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  padding-top: 5px;
-  border: 2px black inset;
-  border-radius: 20px;
-  text-align: center;
+.card {
+  min-height: 300px;
+  position: relative;
 }
 
-.card {
-  height: 30vh;
-  position: relative;
+.card-content {
+    height: 180px;
+}
+
+.comment_button {
+    position: relative;
+    bottom: -70px;
 }
 
 .heading {
@@ -32,4 +31,8 @@ body {
 
 .modal-footer {
   background-color: #ede5d3 !important;
+}
+
+.btn:hover {
+    background-color: #1976d2 !important;
 }
