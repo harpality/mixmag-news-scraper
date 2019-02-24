@@ -4,7 +4,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema; 
 
 const CommentSchema = new Schema ({
-    body: String
+    body: {
+        type: String,
+        validate: [
+            function(input) {
+                return input.length >=1;
+            },
+            "comment length must be greater or equal to 1"
+        ]
+    }
 });
 
 // create the model using mongoose method
