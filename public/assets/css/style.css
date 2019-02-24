@@ -1,6 +1,10 @@
 body {
-  background-color: #ede5d3;
+  background-color: #323232;
   font-family: "Karla", sans-serif;
+}
+
+h1 {
+  text-decoration: underline;
 }
 
 .card {
@@ -23,6 +27,7 @@ body {
 .heading {
   text-align: center;
   margin-bottom: 2rem;
+  color: white;
 }
 
 .modal {

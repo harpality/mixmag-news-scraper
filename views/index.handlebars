@@ -1,7 +1,7 @@
 <div class="container">
     <div class="heading">
         <h1>MIXMAG SCRAPER</h1>
-        <a href="/scrape" class="btn waves-effect waves-purple blue lighten-1">SCRAPE NEW ARTICLES</a>
+        <a href="/scrape" class="btn waves-effect waves-purple indigo darken-1">SCRAPE NEW ARTICLES</a>
     </div>
     <div class="row">
         {{#each result}}
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="comment_button center-align">
-                    <a class="waves-effect waves-purple btn modal-trigger open-comment blue lighten-1"
+                    <a class="waves-effect waves-purple btn modal-trigger open-comment blue accent-3"
                         data-id="{{this.id}}" href="#modal{{this.id}}">Comments</a>
                 </div>
 
@@ -34,7 +34,7 @@
             </div>
             <div class="modal-footer">
 
-                <a class="save-comment waves-effect waves-purple btn blue lighten-1"
+                <a class="save-comment waves-effect waves-purple btn blue accent-3"
                     data-id="{{this.id}}">Save Comment</a>
                 </form>
             </div>
