@@ -27,12 +27,28 @@ $(document).ready(function() {
     console.log(thisId);
     $.ajax({
       method: "GET",
-      url: "/articles/" + thisId,
+      url: "/articles/" + thisId
     }).then(function(data) {
-      console.log(data);
+      console.log("comment id:" + data.comment._id);
       // if (data.comment) {
       //   $(`#modal${thisId} #comments`).text(data.comment.body);
       // }
     });
+  });
+
+  $(".delete-comment").click(function(event) {
+    let thisId = $(this).attr("data-id");
+    console.log(thisId);
+
+    $.ajax({
+      method: "GET",
+      url: "/comments/" + thisId
+    })
+      // With that done
+      .then(function(data) {
+        // Log the response
+        console.log(data);
+        location.reload();
+      });
   });
 });

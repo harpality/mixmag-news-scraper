@@ -88,6 +88,16 @@ router.post("/articles/:id", function(req,res) {
     })
 });
 
+router.get("/comments/:id", function(req,res) {
+    db.Comment.findOneAndRemove({_id: req.params.id})
+    .then(function(data) {
+        res.json(data);
+    })
+    .catch(function(err) {
+        res.json(err);
+    })
+})
+
 
 
 
