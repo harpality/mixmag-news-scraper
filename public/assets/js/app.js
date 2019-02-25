@@ -27,12 +27,12 @@ $(document).ready(function() {
     console.log(thisId);
     $.ajax({
       method: "GET",
-      url: "/articles/" + thisId
+      url: "/articles/" + thisId,
     }).then(function(data) {
       console.log(data);
-      if (data.comment) {
-        $(`#modal${thisId} #comments`).text(data.comment.body);
-      }
+      // if (data.comment) {
+      //   $(`#modal${thisId} #comments`).text(data.comment.body);
+      // }
     });
   });
 });

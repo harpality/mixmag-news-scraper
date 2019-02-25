@@ -44,3 +44,10 @@ h1 {
 .btn:hover {
     background-color: #1976d2 !important;
 }
+
+
+.user_comment{
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  
+}

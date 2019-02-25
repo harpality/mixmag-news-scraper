@@ -26,8 +26,12 @@
             <div class="modal-content">
                 <h5 class="center-align">{{this.title}}</h5><br />
                 <h6>Comments:</h6>
+                {{#if this.comment.body}}
                 <div id="comments">
+                    <span class="user_comment">{{this.comment.body}}</span><a class="delete-comment waves-effect waves-purple btn-small red accent-3"
+                    data-id="{{this.id}}">X</a>
                 </div>
+                {{/if}}
                 <form onsubmit="return false"><br />
                     <h6>Add Comment:</h6>
                     <input type="text" id="userComment"/>

@@ -39,6 +39,7 @@ router.get("/scrape", (req, res) => {
 
   router.get("/", function(req, res) {
       db.Article.find().sort({time: -1}) 
+      .populate("comment")
         .then(function(dbArticle) {
             res.render("index", {result:dbArticle});
         })
