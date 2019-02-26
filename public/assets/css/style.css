@@ -79,6 +79,28 @@ input:focus {
   .modal {
     width: 80%;
   }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .user_comment {
+    font-size: 1rem;
+    line-height: .3rem;
+  }
+  .card-title {
+    font-size: 1.1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: 900;
+  }
+
+  .card {
+    min-height: 310px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
