@@ -3,6 +3,7 @@
         <h1>mixmag scraper</h1>
         <a href="/scrape" class="btn waves-effect waves-purple indigo darken-1">SCRAPE NEW ARTICLES</a>
     </div>
+    
     <div class="row">
         {{#each result}}
         <div class="col l4 m6 s12">
@@ -12,7 +13,7 @@
                     <p id="summary">{{this.summary}}.</p>
                     <div class="info_link">
                         <p>Read more:</p>
-                        <a href="{{this.link}}">{{this.link}}</a>
+                        <a href="{{this.link}}" target="_blank">{{this.link}}</a>
                     </div>
                 </div>
 
