@@ -18,7 +18,7 @@
 
                 <div class="comment_button center-align">
                     <a class="waves-effect waves-purple btn modal-trigger open-comment blue accent-3"
-                        data-id="{{this.id}}" href="#modal{{this.id}}">Comments {{#each this.comments}} {{this.length}}{{/each}}</a>
+                        data-id="{{this.id}}" href="#modal{{this.id}}">Comments {{#if this.comments.comment}}{{#each this.comments}}{{this.length}}{{/each}}{{/if}}{{#unless this.comments.comment}}0{{/unless}}</a>
                 </div>
 
             </div>
