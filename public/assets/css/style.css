@@ -8,7 +8,7 @@ h1 {
 }
 
 .card {
-  min-height: 300px;
+  min-height: 320px;
   position: relative;
 }
 
@@ -19,9 +19,13 @@ h1 {
     height: 180px;
 }
 
+.card-title {
+  font-size: 1.5rem !important;
+}
+
 .comment_button {
     position: relative;
-    bottom: -70px;
+    bottom: -6rem;
 }
 
 .heading {
@@ -30,11 +34,14 @@ h1 {
   color: white;
 }
 
+.info_link {
+  margin-top: .66rem;
+}
 .modal {
   background-color: #ede5d3;
   text-align: left;
   width: 35%;
-  border: 8px outset black;
+  border: 5px outset black;
 }
 
 .modal-footer {
@@ -51,6 +58,10 @@ h1 {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   
+}
+
+#summary {
+  font-style: italic;
 }
 
 .delete-comment {
