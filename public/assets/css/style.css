@@ -43,7 +43,8 @@ h1 {
   text-align: left;
   width: 35%;
   min-height: 30%;
-  border: 5px outset black;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 
 .modal-footer {
@@ -80,6 +81,7 @@ input:focus {
 @media only screen and (max-width: 600px) {
   .modal {
     width: 80%;
+    height: 500px;
   }
 
   h5 {
@@ -95,29 +97,34 @@ input:focus {
     line-height: .3rem;
   }
   .card-title {
-    font-size: 1.1rem !important;
+    font-size: 2rem !important;
     line-height: 1.5rem !important;
-    font-weight: 900;
   }
 
   .card {
-    min-height: 310px;
+    min-height: 290px;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 980px) {
   .modal {
     width: 80%;
   }
 
   .card-title {
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
     line-height: 1.5rem !important;
     font-weight: 900;
   }
 
   .card {
-    min-height: 400px;
+    min-height: 330px;
   }
+
+  .comment_button {
+    position: relative;
+    bottom: -7.5rem;
+}
+
 
 } 
