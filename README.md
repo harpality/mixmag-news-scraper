@@ -1,5 +1,7 @@
-# MIXMAG News Scraper
+# MIXMAG News Scraper 💿
 
-This app scrapes the latest news from mixmag.net using Node, Express, Axios, Handlebars, and Mongoose.js. Users can also leave a comment per article.
+This is a full-stack app which scrapes the latest news from mixmag.net. It utilizes Node.js, Cheerio, and Axios for data scraping then displays the front-end using the MVC pattern with Mongoose, Handlebars, and Express. Users may also add and delete comments on each article via a modal pop-up.
 
-Deployed at: http://youve-been-scraped.herokuapp.com/
+![Screenshot](public/assets/img/screenshot.png)
+
+🚀 Deployed at: http://youve-been-scraped.herokuapp.com/
