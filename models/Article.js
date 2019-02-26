@@ -21,10 +21,11 @@ let ArticleSchema = new Schema({
         required: true,
         unique: true
     },
-    comment: {
+    comments: {
+        comment: {
         type: Schema.Types.ObjectId,
         ref: "Comment"
-    },
+    }},
     time: {
         type: Date,
         default: Date.now

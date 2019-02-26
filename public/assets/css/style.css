@@ -49,5 +49,10 @@ h1 {
 .user_comment{
   margin-right: 1rem;
   font-size: 1.25rem;
+  margin-bottom: 2rem;
   
+}
+
+.delete-comment {
+  margin-bottom: 1rem;
 }

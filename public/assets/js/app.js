@@ -22,19 +22,15 @@ $(document).ready(function() {
       });
   });
 
-  $("body").on("click", "a.open-comment", function() {
-    let thisId = $(this).attr("data-id");
-    console.log(thisId);
-    $.ajax({
-      method: "GET",
-      url: "/articles/" + thisId
-    }).then(function(data) {
-      console.log("comment id:" + data.comment._id);
-      // if (data.comment) {
-      //   $(`#modal${thisId} #comments`).text(data.comment.body);
-      // }
-    });
-  });
+  // $("body").on("click", "a.open-comment", function() {
+  //   let thisId = $(this).attr("data-id");
+  //   console.log(thisId);
+  //   $.ajax({
+  //     method: "GET",
+  //     url: "/articles/" + thisId
+  //   }).then(function(data) {
+  //   });
+  // });
 
   $(".delete-comment").click(function(event) {
     let thisId = $(this).attr("data-id");
