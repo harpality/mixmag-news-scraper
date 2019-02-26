@@ -89,9 +89,12 @@ router.post("/articles/:id", function(req,res) {
     })
 });
 
-router.get("/comments/:id", function(req,res) {
-    db.Comment.findOneAndRemove({_id: req.params.id})
+router.get("/comments/:id/:articleid", function(req,res) {
+    console.log(req.body);
+    db.Article.findOneAndUpdate({_id: req.params.articleid}, {$pull: {comments: {comment: req.params.id}}})
+    
     .then(function(data) {
+        console.log(data);
         res.json(data);
     })
     .catch(function(err) {

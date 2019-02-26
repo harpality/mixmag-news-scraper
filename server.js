@@ -13,8 +13,15 @@ app.use(express.json());
 
 // set up handlebars as views
 const exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+const hbs = exphbs.create({
+    defaultLayout: "main",
+    helpers: {
+        commentsCount: function(comments) {
+            return comments.length || 0;
+        }
+    }
+})
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // make public a static folder

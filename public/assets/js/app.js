@@ -34,12 +34,14 @@ $(document).ready(function() {
 
   $(".delete-comment").click(function(event) {
     let thisId = $(this).attr("data-id");
+    let articleId = $(this).attr("data-article");;
     console.log(thisId);
+    console.log(articleId);
 
     $.ajax({
       method: "GET",
-      url: "/comments/" + thisId
-    })
+      url: "/comments/" + thisId + "/" + articleId,
+      })
       // With that done
       .then(function(data) {
         // Log the response

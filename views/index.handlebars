@@ -18,7 +18,7 @@
 
                 <div class="comment_button center-align">
                     <a class="waves-effect waves-purple btn modal-trigger open-comment blue accent-3"
-                        data-id="{{this.id}}" href="#modal{{this.id}}">Comments</a>
+                        data-id="{{this.id}}" href="#modal{{this.id}}">Comments {{#each this.comments}} {{this.length}}{{/each}}</a>
                 </div>
 
             </div>
@@ -34,7 +34,7 @@
                  {{#if body}}
                 <div id="comments">
                     <span class="user_comment">{{body}}</span><a class="delete-comment waves-effect waves-purple btn-small red accent-3"
-                    data-id="{{_id}}">X</a>
+                    data-id="{{_id}}" data-article="{{../this.id}}">X</a>
                 </div>
                 {{/if}}
                 {{/each}}
