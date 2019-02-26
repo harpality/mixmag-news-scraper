@@ -5,13 +5,12 @@ const PORT = process.env.PORT || 3000;
 // initialize express
 const app = express();
 
-// ** middleware **
 
 // parsing request body as JSON
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-// set up handlebars as views
+// set up handlebars as views and helper functions
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({
     defaultLayout: "main",
@@ -21,13 +20,14 @@ const hbs = exphbs.create({
         }
     }
 })
+
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // make public a static folder
 app.use(express.static("public"));
 
-// import routes and give server access. 
+// import routes and give server access
 const routes = require("./controllers/newsController")
 
 app.use(routes);
