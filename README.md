@@ -18,7 +18,7 @@ Update the `PORT` settings in `express` if necessary, connect to your local `mon
 
 This app uses the above modules to create a full news outlet which lets users leave and delete anonymous comments. Click 'Scrape New Articles' to get the latest news and feel free to leave a comment via the modal, if you wish. All data including the articles and comments are stored in a Mongo database.
 
-🚀 Deployed at: https://youve-been-scraped.herokuapp.com/
+🚀 Deployed at: https://mixmag-news-scraper.herokuapp.com/
 
 ## Built With
 
