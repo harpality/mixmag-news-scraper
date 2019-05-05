@@ -1,9 +1,10 @@
 <div class="container">
     <div class="heading">
         <h1>mixmag scraper</h1>
-        <a href="/scrape" class="btn waves-effect waves-purple indigo darken-1">SCRAPE NEW ARTICLES</a>
+        <button class="btn waves-effect waves-purple indigo darken-1"><a class="scrape-button" href="/scrape">SCRAPE NEW
+                ARTICLES</a>
+        </button>
     </div>
-    
     <div class="row">
         {{#each result}}
         <div class="col l4 m6 s12">
@@ -18,9 +19,9 @@
                 </div>
 
                 <div class="comment_button center-align">
-                    <a class="waves-effect waves-purple btn modal-trigger open-comment blue accent-3"
-                        data-id="{{this.id}}" href="#modal{{this.id}}">Comments
-                        {{#if this.comments.comment}}{{#each this.comments}}{{this.length}}{{/each}}{{/if}}{{#unless this.comments.comment}}0{{/unless}}</a>
+                    <button class="waves-effect waves-purple btn modal-trigger open-comment blue accent-3"
+                        data-id="{{this.id}}" data-target="modal{{this.id}}" tabindex="0">Comments
+                        {{#if this.comments.comment}}{{#each this.comments}}{{this.length}}{{/each}}{{/if}}{{#unless this.comments.comment}}0{{/unless}}</a></button>
                 </div>
 
             </div>
@@ -47,9 +48,8 @@
                     <input type="text" id="userComment" />
             </div>
             <div class="modal-footer">
-
-                <a class="save-comment waves-effect waves-purple btn blue accent-3" data-id="{{this.id}}">Save
-                    Comment</a>
+                <button class="save-comment waves-effect waves-purple btn blue accent-3" data-id="{{this.id}}">Save
+                    Comment</button>
                 </form>
             </div>
         </div>
