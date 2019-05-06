@@ -4,6 +4,10 @@ _MIXMAG News Scraper_ is a full-stack app which scrapes the latest news from mix
 
 ![Screenshot](public/assets/img/screenshot.png)
 
+## Motivation
+
+I wanted to make a quick and clean way to read the latest news headlines from mixmag.net without having to navigate their site and be subject to pictures and advertisements.
+
 ## Getting Started
 
 The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.

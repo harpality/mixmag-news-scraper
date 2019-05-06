@@ -1,6 +1,8 @@
 $(document).ready(function() {
   // opens materialize modal
   $(".modal").modal();
+  // sidenav
+  $(".sidenav").sidenav();
   // sends the user's comment to the server to put in the db.
   $(".save-comment").click(function(event) {
     let thisId = $(this).attr("data-id");
