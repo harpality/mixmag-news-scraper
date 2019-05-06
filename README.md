@@ -2,7 +2,7 @@
 
 _MIXMAG News Scraper_ is a full-stack app which scrapes the latest news from mixmag.net. It utilizes Node.js, Cheerio, and Axios for data scraping then displays the front-end using the MVC pattern with Mongoose, Handlebars, and Express. Users may also add and delete comments on each article via a modal pop-up. The number of comments is shown on each article.
 
-![Screenshot](public/assets/img/screenshot.png)
+![Screenshot](public/assets/img/layout.png)
 
 ## Motivation
 
