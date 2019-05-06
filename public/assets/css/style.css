@@ -46,7 +46,8 @@ nav {
   background-color: #3949ab;
 }
 
-.mobile-link {
+.mobile-link,
+.sidenav-close {
   color: white !important;
 }
 
